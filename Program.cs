@@ -28,7 +28,7 @@ namespace QuartzNetCoreError
                 var scheduler = await factory.GetScheduler();
 
 
-                // comment and unncomment this line to see the two different type of errors
+                // comment and unncomment below line to see the two different type of errors
                 scheduler.ListenerManager.AddJobListener(new GlobalJobListener(logger), GroupMatcher<JobKey>.AnyGroup());
 
                 scheduler.ListenerManager.AddSchedulerListener(new GlobalSchedulerListener(logger));
